@@ -5,7 +5,11 @@ import com.signal.signal.signal.Signal;
 import com.signal.signal.signal.SignalRegister;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
+@Component
 public class SignalHandlerImpl implements SignalHandler {
     @Autowired
     SignalRegister signalRegister;
@@ -16,6 +20,8 @@ public class SignalHandlerImpl implements SignalHandler {
     @Override
     public void handleSignal(int id) {
         Signal signal = signalRegister.signalMap(applicationContext).get(id + "");
-        signal.perform();
+        Optional.ofNullable(signal).ifPresentOrElse(Signal::perform, () -> {
+            throw new RuntimeException("This Signal is not supported");
+        });
     }
 }
