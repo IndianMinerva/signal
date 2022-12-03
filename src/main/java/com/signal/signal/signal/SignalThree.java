@@ -4,7 +4,7 @@ import com.signal.signal.original.Algorithms;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("2")
+@Component("3")
 public class SignalThree implements Signal {
     @Autowired
     Algorithms algo;
