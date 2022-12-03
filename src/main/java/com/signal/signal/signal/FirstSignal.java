@@ -2,12 +2,12 @@ package com.signal.signal.signal;
 
 import org.springframework.stereotype.Component;
 
-@Component("101")
+@Component("1")
 public class FirstSignal implements Signal{
 
     @Override
     public String getId() {
-        return "101";
+        return "1";
     }
 
     @Override

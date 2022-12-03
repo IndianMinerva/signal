@@ -1,4 +1,4 @@
-package com.signal.signal.algorithm;
+package com.signal.signal.original;
 
 /**
  * This is implemented in a third-party library and we cannot change it

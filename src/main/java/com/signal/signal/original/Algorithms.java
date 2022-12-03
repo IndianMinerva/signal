@@ -1,4 +1,4 @@
-package com.signal.signal.algorithm;
+package com.signal.signal.original; //TODO: For the lack of originality :-)
 
 import org.springframework.stereotype.Component;
 

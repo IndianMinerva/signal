@@ -1,5 +1,6 @@
-package com.signal.signal.handler;
+package com.signal.signal.original;
 
+import com.signal.signal.original.SignalHandler;
 import com.signal.signal.signal.Signal;
 import com.signal.signal.signal.SignalRegister;
 import org.springframework.beans.factory.annotation.Autowired;
