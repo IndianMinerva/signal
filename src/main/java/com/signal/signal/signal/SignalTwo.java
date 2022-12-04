@@ -10,8 +10,8 @@ public class SignalTwo implements Signal{
     Algorithms algo;
 
     @Override
-    public String getId() {
-        return "2";
+    public Integer getId() {
+        return 2;
     }
 
     @Override

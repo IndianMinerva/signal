@@ -10,8 +10,8 @@ public class SignalThree implements Signal {
     Algorithms algo;
 
     @Override
-    public String getId() {
-        return "3";
+    public Integer getId() {
+        return 3;
     }
 
     @Override

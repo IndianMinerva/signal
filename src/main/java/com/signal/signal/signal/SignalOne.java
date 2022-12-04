@@ -10,8 +10,8 @@ public class SignalOne implements Signal{
     Algorithms algo;
 
     @Override
-    public String getId() {
-        return "1";
+    public Integer getId() {
+        return 1;
     }
 
     @Override
