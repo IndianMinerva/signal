@@ -18,7 +18,7 @@ public class SignalConfig {
     @Autowired
     private List<Signal> signals;
 
-    @Bean("signalRegister")
+    @Bean("signalsRegistry")
     public Map<Integer, Signal> signalMap() {
         log.info("Signals in the registry: {}", signals.stream().map(Signal::getClass).toList());
         return signals.stream().collect(Collectors.toMap(Signal::getId, Function.identity()));

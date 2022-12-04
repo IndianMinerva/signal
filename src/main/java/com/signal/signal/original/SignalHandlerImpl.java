@@ -10,11 +10,11 @@ import java.util.Optional;
 @Component
 public class SignalHandlerImpl implements SignalHandler {
     @Autowired
-    Map<Integer, Signal> signalRegister;
+    Map<Integer, Signal> signalsRegistry;
 
     @Override
     public void handleSignal(int id) {
-        Signal signal = signalRegister.get(id);
+        Signal signal = signalsRegistry.get(id);
         Optional.ofNullable(signal).ifPresentOrElse(Signal::perform, () -> {
             throw new RuntimeException("This Signal is not supported");
         });
